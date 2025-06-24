@@ -1,21 +1,21 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import { Roboto, Merriweather } from "next/font/google";
+//import { Roboto, Merriweather } from "next/font/google";
 import "./globals.css";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  variable: "--font-roboto",
-});
+//const roboto = Roboto({
+//  subsets: ["latin"],
+//  weight: ["300", "400", "700"],
+//  variable: "--font-roboto",
+//});
 
-const merriweather = Merriweather({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-merriweather",
-});
+//const merriweather = Merriweather({
+//  subsets: ["latin"],
+//  weight: ["400", "700"],
+//  variable: "--font-merriweather",
+//});
 
 export const metadata: Metadata = {
   title: "D&D Nexus - Seu Guia de D&D",
