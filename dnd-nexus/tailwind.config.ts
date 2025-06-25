@@ -13,6 +13,7 @@ export default {
           'border': '#444',
           'text-primary': '#e0e0e0',
           'text-secondary': '#b0b0b0',
+          'primary-color': '#963d24'
         },
         fontFamily: {
           'sans': ['Roboto', 'sans-serif'],

@@ -35,14 +35,6 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-8">
           <HeroSection />
           <QuickAccess />
-          <section className="grid md:grid-cols-2 gap-8 mt-12 sm:mt-16">
-            <Suspense fallback={<CardSkeleton />}>
-              <MonsterCard />
-            </Suspense>
-            <Suspense fallback={<CardSkeleton />}>
-              <SpellCard />
-            </Suspense>
-          </section>
         </div>
       </div>
     </div>
