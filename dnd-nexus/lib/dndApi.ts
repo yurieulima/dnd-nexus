@@ -1,5 +1,5 @@
  // lib/dndApi.ts
-import { ApiResourceList, Monster, Spell } from '@/types';
+import { ApiResource, ApiResourceList, Monster, Spell } from '@/types';
 
 const API_BASE_URL = 'https://www.dnd5eapi.co';
 
@@ -27,4 +27,19 @@ export async function getRandomSpell(): Promise<Spell> {
   const randomIndex = Math.floor(Math.random() * list.count);
   const randomSpellUrl = list.results[randomIndex].url;
   return fetchResource<Spell>(randomSpellUrl);
+}
+
+export async function getAllClasses(): Promise<ApiResource[]> {
+  try {
+    const response = await fetch('https://www.dnd5eapi.co/api/classes');
+    if (!response.ok) {
+      throw new Error('Falha ao buscar a lista de classes.');
+    }
+    const data = await response.json();
+    return data.results;
+  } catch (error) {
+    console.error(error);
+    // Retornar um array vazio em caso de erro para não quebrar a página
+    return [];
+  }
 }
