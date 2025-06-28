@@ -1,5 +1,5 @@
- // lib/dndApi.ts
-import { ApiResource, ApiResourceList, Monster, Spell } from '@/types';
+// lib/dndApi.ts
+import { ApiResource, ApiResourceList, Monster, Spell, Class } from '@/types';
 
 const API_BASE_URL = 'https://www.dnd5eapi.co';
 
@@ -41,5 +41,19 @@ export async function getAllClasses(): Promise<ApiResource[]> {
     console.error(error);
     // Retornar um array vazio em caso de erro para não quebrar a página
     return [];
+  }
+}
+
+export async function getClassDetails(classIndex: string): Promise<Class | null> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/classes/${classIndex}`);
+    if (!response.ok) {
+      throw new Error(`Falha ao buscar detalhes da classe ${classIndex}.`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
   }
 }

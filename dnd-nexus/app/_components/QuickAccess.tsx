@@ -3,7 +3,7 @@ import React from 'react';
 import { Card } from './ui/Card';
 
 const accessItems = [
-  { icon: <img src="/classes-icon.png" alt="Classes" className="inline w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30" />, title: 'Classes', href: '/classes' },
+  { icon: <img src="/classes/classes-icon.png" alt="Classes" className="inline w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30" />, title: 'Classes', href: '/classes' },
   { icon: <img src="/races-icon.png" alt="Races" className="inline w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30" />, title: 'Races', href: '/races' },
   { icon: <img src="/scroll-icon.png" alt="Spells" className="inline w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30" />, title: 'Spells', href: '/spells' },
   { icon: <img src="/monster-icon.png" alt="Monsters" className="inline w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30" />, title: 'Monsters', href: '/monsters' },
